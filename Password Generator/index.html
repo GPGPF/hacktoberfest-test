@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="password">
+                <input type="text" id="password" disabled>
+                <button onclick="copyToClipBoard()" class="copy" id="copy-button"><b>Copy!!!</b></button>
+            </div>
+            <div class="length">
+                <span>Length: <span id="current-password-length">8</span></span>
+                <input type="range" value="8" name="password-length" id="password-length" min="6" max="25">
+            </div>
+            <div class="inclusions">
+                <div class="inclustion">
+                    <input type="checkbox" name="lowercase" id="lowercase" checked>
+                    <label for="lowercase">Include Lowercase Alphabets</label>
+                </div>
+                <div class="inclustion">
+                    <input type="checkbox" name="uppercase" id="uppercase" checked>
+                    <label for="uppercase">Include Uppercase Alphabets</label>
+                </div>
+                <div class="inclustion">
+                    <input type="checkbox" name="numbers" id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="inclustion">
+                    <input type="checkbox" name="symbols" id="symbols">
+                    <label for="symbols">Include Special Characters</label>
+                </div>
+            </div>
+            <button onclick="generatePassword()" class="generate-password">Generate Password</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
